@@ -2,62 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://example.com/eleventy-base-blog/posts/firstpost/</loc>
+    <loc>https://kane-thornwyrd.github.io/blog/firstpost/</loc>
     <lastmod>2018-05-01</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/eleventy-base-blog/posts/secondpost/</loc>
+    <loc>https://kane-thornwyrd.github.io/blog/secondpost/</loc>
     <lastmod>2018-07-04</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/eleventy-base-blog/posts/thirdpost/</loc>
+    <loc>https://kane-thornwyrd.github.io/blog/thirdpost/</loc>
     <lastmod>2018-08-24</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/eleventy-base-blog/posts/fourthpost/</loc>
+    <loc>https://kane-thornwyrd.github.io/blog/fourthpost/</loc>
     <lastmod>2018-09-30</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/eleventy-base-blog/about/</loc>
-    <lastmod>2021-03-20</lastmod>
+    <loc>https://kane-thornwyrd.github.io/blog/%C3%A9chodeslabosensuspend/</loc>
+    <lastmod>2022-08-28</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/eleventy-base-blog/posts/</loc>
-    <lastmod>2021-03-20</lastmod>
+    <loc>https://kane-thornwyrd.github.io/about/</loc>
+    <lastmod>2022-09-22</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/eleventy-base-blog/</loc>
-    <lastmod>2021-03-20</lastmod>
+    <loc>https://kane-thornwyrd.github.io/blog/</loc>
+    <lastmod>2022-09-22</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/eleventy-base-blog/page-list/</loc>
-    <lastmod>2021-03-20</lastmod>
+    <loc>https://kane-thornwyrd.github.io/</loc>
+    <lastmod>2022-09-22</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/eleventy-base-blog/tags/</loc>
-    <lastmod>2021-03-20</lastmod>
+    <loc>https://kane-thornwyrd.github.io/tags/</loc>
+    <lastmod>2022-09-22</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/eleventy-base-blog/tags/another-tag/</loc>
-    <lastmod>2021-03-20</lastmod>
+    <loc>https://kane-thornwyrd.github.io/tags/another-tag/</loc>
+    <lastmod>2022-09-22</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/eleventy-base-blog/tags/second-tag/</loc>
-    <lastmod>2021-03-20</lastmod>
+    <loc>https://kane-thornwyrd.github.io/tags/second-tag/</loc>
+    <lastmod>2022-09-22</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/eleventy-base-blog/tags/number-2/</loc>
-    <lastmod>2021-03-20</lastmod>
+    <loc>https://kane-thornwyrd.github.io/tags/posts-with-two-tags/</loc>
+    <lastmod>2022-09-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kane-thornwyrd.github.io/tags/number-2/</loc>
+    <lastmod>2022-09-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kane-thornwyrd.github.io/tags/suspension/</loc>
+    <lastmod>2022-09-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kane-thornwyrd.github.io/tags/censure-abusive/</loc>
+    <lastmod>2022-09-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kane-thornwyrd.github.io/tags/facebook/</loc>
+    <lastmod>2022-09-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kane-thornwyrd.github.io/tags/cogito-ergo-seum/</loc>
+    <lastmod>2022-09-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kane-thornwyrd.github.io/tags/complotist-deleter/</loc>
+    <lastmod>2022-09-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kane-thornwyrd.github.io/tags/les-vaxxeuses/</loc>
+    <lastmod>2022-09-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kane-thornwyrd.github.io/tags/herverifie/</loc>
+    <lastmod>2022-09-22</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kane-thornwyrd.github.io/tags/ban/</loc>
+    <lastmod>2022-09-22</lastmod>
   </url>
 </urlset>
