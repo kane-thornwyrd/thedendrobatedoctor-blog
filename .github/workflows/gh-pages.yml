@@ -17,10 +17,9 @@ jobs:
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - deps:
+      - name: Deps
         run: |
-                npm i
+          npm i
       - name: Build
         uses: TartanLlama/actions-eleventy@master
       - name: Deploy
