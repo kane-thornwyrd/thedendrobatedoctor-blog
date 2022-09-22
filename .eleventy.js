@@ -71,17 +71,17 @@ module.exports = function (eleventyConfig) {
   });
 
   // Customize Markdown library and settings:
-  eleventyConfig.amendLibrary("md", mdLib => {
-    mdLib.use(markdownItAnchor, {
-      permalink: markdownItAnchor.permalink.ariaHidden({
-        placement: "after",
-        class: "direct-link",
-        symbol: "#",
-      }),
-      level: [1, 2, 3, 4],
-      slugify: eleventyConfig.getFilter("slug")
-    });
-  });
+  // eleventyConfig.amendLibrary("md", mdLib => {
+  //   mdLib.use(markdownItAnchor, {
+  //     permalink: markdownItAnchor.permalink.ariaHidden({
+  //       placement: "after",
+  //       class: "direct-link",
+  //       symbol: "#",
+  //     }),
+  //     level: [1, 2, 3, 4],
+  //     slugify: eleventyConfig.getFilter("slug")
+  //   });
+  // });
 
   // Override @11ty/eleventy-dev-server defaults (used only with --serve)
   eleventyConfig.setServerOptions({
