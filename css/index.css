@@ -14,6 +14,7 @@
   --background-color-contrast: var(--color-gray-90);
 
   --text-color: var(--color-gray-90);
+  --text-color-contrast: var(--color-gray-20);
   --text-color-link: #082840;
   --text-color-link-visited: #17050F;
 }
@@ -27,6 +28,7 @@
     /* --text-color is assigned to --color-gray-_ above */
     --text-color-link: #fff;
     --text-color-link-visited: #ddd;
+    --text-color-contrast: var(--color-gray-90);
 
     --background-color: #18191a;
     --background-color-contrast: var(--color-gray-20);
@@ -253,8 +255,9 @@ code {
   flex-wrap: wrap;
 }
 
-.taglist > li {
-  display: inline-block;
+.post-tag > a {
+  text-decoration: none;
+  padding: 0.5em 1em;
 }
 
 
@@ -268,22 +271,6 @@ code {
 
 .tmpl-home .tmpl-post{
   border-bottom: 5px solid var(--background-color-contrast);
-}
-
-.tmpl-home .taglist{
-  padding: 1rem;
-  margin: 0;
-  background-color: rgba(0,0,0,.1);
-  color: rgba(255, 255, 255, 0.4);
-}
-
-@media (prefers-color-scheme: dark) {
-  .tmpl-home .taglist{
-    padding: 1rem;
-    margin: 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.1) !important;
-  }
 }
 
 
@@ -373,27 +360,24 @@ code {
 
 /* Tags */
 .post-tag {
-  display: inline-flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
-  text-transform: uppercase;
-  font-size: 0.75em; /* 12px /16 */
-  padding: 0.08333333333333em 0.3333333333333em; /* 1px 4px /12 */
+  font-variant: small-caps;
+  font-size: 0.75em;
   margin: 0;
-  color: var(--color-gray-90);
-  border-radius: 0.25em; /* 3px /12 */
   text-decoration: none;
   line-height: 1.8;
 }
-a[href].post-tag,
-a[href].post-tag:visited {
+/* .post-tag,
+.post-tag:visited {
   color: inherit;
+} */
+.post-tag:hover > a[href],
+.post-tag:focus > a[href]{
+  color: var(--color-gray-20);
 }
-a[href].post-tag:hover,
-a[href].post-tag:focus {
-  color: var(--background-color);
-  background-color: var(--color-gray-90);
-}
+
 .postlist-item > .post-tag {
   align-self: center;
 }
