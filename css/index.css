@@ -318,8 +318,7 @@ code {
     border: 1px solid var(--background-color-contrast);
     right: 2rem;
     top: 5px;
-    bottom: 5px;;
-    transform: rotate(-1deg);
+    bottom: 5px;
     box-shadow: 10px 10px 20px var(--background-color-contrast);
   }
   .layout-postlist::before,
