@@ -1,11 +1,10 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://example.com/",
-  "language": "en",
+  "title": "The Dendrobate Doctor",
+  "url": "https://kane-thornwyrd.github.io/thedendrobatedoctor-blog/",
+  "language": "fr",
   "description": "I am writing about my experiences as a naval navel-gazer.",
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com",
-    "url": "https://example.com/about-me/"
+    "name": "The Dendrobate Doctor",
+    "url": "https://www.facebook.com/TheDendrobateDoctor/"
   }
 }

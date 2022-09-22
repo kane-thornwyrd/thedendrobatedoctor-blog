@@ -1,22 +1,16 @@
 module.exports = {
   en: {
-    also: "This page is also available in:",
-    previous: "Previous",
-    next: "Next",
     nav: {
-      home: "Home",
-      archive: "Archive",
-      about: "About Me",
+      home: "Accueil",
+      archive: "Les archives",
+      about: "À mon propos…",
     }
   },
-  es: {
-    also: "Esta página también está disponible en:",
-    previous: "Anterior",
-    next: "Siguiente",
+  fr: {
     nav: {
-      home: "Página de inicio",
-      archive: "Archivo",
-      about: "Acerca de mí",
+      home: "Accueil",
+      archive: "Les archives",
+      about: "À mon propos…",
     }
   }
 };

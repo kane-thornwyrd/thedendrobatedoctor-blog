@@ -11,6 +11,7 @@
   --color-gray-90: #333;
 
   --background-color: #fff;
+  --background-color-contrast: var(--color-gray-90);
 
   --text-color: var(--color-gray-90);
   --text-color-link: #082840;
@@ -24,10 +25,11 @@
     --color-gray-90: #dad8d8;
 
     /* --text-color is assigned to --color-gray-_ above */
-    --text-color-link: #1493fb;
-    --text-color-link-visited: #a6a6f8;
+    --text-color-link: #fff;
+    --text-color-link-visited: #ddd;
 
-    --background-color: #15202b;
+    --background-color: #18191a;
+    --background-color-contrast: var(--color-gray-20);
   }
 }
 
@@ -51,12 +53,33 @@ p:last-child {
 }
 p,
 .tmpl-post li,
+.tmpl-post .post-tags,
 img {
   max-width: 37.5em; /* 600px /16 */
 }
 p,
 .tmpl-post li {
   line-height: 1.45;
+}
+
+blockquote {
+  margin-bottom: 2rem;
+}
+blockquote :first-child {
+  position: relative;
+}
+blockquote :first-child::before {
+  content: "«";
+  display: block;
+  position: absolute;
+  top: -1rem;
+  margin-left: -1rem;
+}
+blockquote :last-child::after {
+  content: "»";
+  display: block;
+  position: absolute;
+  margin-left: -1rem;
 }
 
 a[href] {
@@ -73,12 +96,18 @@ main :first-child {
   margin-top: 0;
 }
 header {
-  border-bottom: 1px dashed var(--color-gray-20);
+  border-bottom: 1px solid var(--color-gray-20);
+  background-color: #242526;
+  z-index: 1000;
+  position: relative;
 }
 header:after {
   content: "";
   display: table;
   clear: both;
+}
+header a {
+  color: #fff !important;
 }
 
 table {
@@ -148,8 +177,10 @@ code {
 
 /* Posts list */
 .postlist {
-  list-style: none;
+  list-style: none !important;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .postlist-item {
   display: flex;
@@ -161,7 +192,6 @@ code {
 .postlist-item:before {
   display: inline-block;
   pointer-events: none;
-  content: "" counter(start-from, decimal-leading-zero) ". ";
   line-height: 100%;
   text-align: right;
 }
@@ -189,6 +219,108 @@ code {
 }
 
 
+.layout-postlist {
+  display: block;
+  padding: 1rem;
+  padding-top: 3rem;
+  background: var(--background-color);
+}
+
+
+.taglist, .post-tags {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+
+.tmpl-home, .tmpl-post {
+  display: block;
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  border: none;
+  background: var(--background-color);
+}
+
+
+@media screen and (min-width: 900px) {
+  .layout-postlist {
+    position: fixed;
+    right:0;
+    bottom: 0;
+    top: 0;
+    width: 300px;
+    z-index: 1000;
+    border-left: 1px solid var(--background-color-contrast);
+  }
+  .layout-postlist .content{
+    overflow-y: scroll;
+    max-height: calc(100% - 2rem);
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    top: 1rem;
+    bottom: 1rem;
+
+  }
+
+  .tmpl-home, .tmpl-post {
+    display: block;
+    margin: auto;
+    margin-right: 300px;
+    width: calc(100% - 300px);
+    padding: 1rem;
+    border: none;
+    background: var(--background-color);
+  }
+
+
+  .tmpl-home .tmpl-post {
+    width: 100%;
+    border-left: 5px solid var(--background-color-contrast);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .layout-postlist {
+    border: 1px solid var(--background-color-contrast);
+    right: 10px;
+    top: 5px;
+    bottom: 5px;;
+    transform: rotate(-1deg);
+    box-shadow: 10px 10px 20px var(--background-color-contrast);
+  }
+  .layout-postlist::before,
+  .layout-postlist::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10%;
+    filter: opacity(25%);
+    background: linear-gradient(to bottom, var(--background-color-contrast), var(--background-color));
+  }
+  .layout-postlist::after {
+    top: auto;
+    bottom: 0;
+    background: linear-gradient(to top, var(--background-color-contrast), var(--background-color));
+  }
+
+  .layout-postlist .content{
+    bottom: 2rem;
+  }
+
+  .tmpl-post {
+    max-width: 900px;
+    border-top: none;
+    box-shadow: 0px 0px 20px var(--background-color-contrast);
+    margin-right: auto;
+  }
+}
+
 /* Tags */
 .post-tag {
   display: inline-flex;
@@ -201,7 +333,6 @@ code {
   margin-top: 0.5em; /* 6px /12 */
   margin-bottom: 0.5em; /* 6px /12 */
   color: var(--color-gray-90);
-  border: 1px solid var(--color-gray-50);
   border-radius: 0.25em; /* 3px /12 */
   text-decoration: none;
   line-height: 1.8;
@@ -212,7 +343,8 @@ a[href].post-tag:visited {
 }
 a[href].post-tag:hover,
 a[href].post-tag:focus {
-  background-color: var(--color-gray-20);
+  color: var(--background-color);
+  background-color: var(--color-gray-90);
 }
 .postlist-item > .post-tag {
   align-self: center;
