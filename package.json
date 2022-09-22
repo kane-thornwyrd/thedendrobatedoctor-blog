@@ -9,6 +9,7 @@
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
     "start": "eleventy --serve --quiet",
+    "deploy": "npm run build && gh-pages -d docs",
     "debug": "DEBUG=Eleventy* eleventy"
   },
   "repository": {
@@ -30,6 +31,7 @@
     "rosetta": "^1.1.0"
   },
   "devDependencies": {
-    "@11ty/eleventy-img": "^2.0.1"
+    "@11ty/eleventy-img": "^2.0.1",
+    "gh-pages": "^4.0.0"
   }
 }
