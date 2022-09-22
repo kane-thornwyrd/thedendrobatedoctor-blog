@@ -38,9 +38,10 @@
         {% include "postslist.njk" %}
       </div>
     </section>
-    <main {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+    <main {% if templateClass %} class="{{ templateClass }}" {% endif %} id="content">
       {{ content | safe }}
     </main>
+    <a class="back-top" href="#content">↑</a>
     <footer></footer>
     <!-- Current page: {{ page.url | url }} -->
   </body>

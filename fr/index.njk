@@ -5,7 +5,6 @@ eleventyNavigation:
   order: 0
 ---
 
-<h1>Dernier article:</h1>
 <div class="tmpl-post">
 {% set latestpost = collections.posts | head(-1) | first %}
 <time class="postlist-date" datetime="{{ latestpost.date | htmlDateString }}">{{ latestpost.date | readableDate }}</time>
