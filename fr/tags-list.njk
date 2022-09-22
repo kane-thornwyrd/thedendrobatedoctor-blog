@@ -1,0 +1,15 @@
+---
+permalink: /tags/
+layout: layouts/home.njk
+title: Les étiquettes
+---
+
+<h1>{{ title }}</h1>
+<ul class="taglist">
+  {% for tag in collections.all | getAllTags | filterTagList %}
+    <li>
+      {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }} | {{ collections[ tag ].length }}</a>
+    </li>
+  {% endfor %}
+</ul>

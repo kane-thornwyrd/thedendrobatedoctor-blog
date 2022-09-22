@@ -1,0 +1,22 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: layouts/home.njk
+eleventyComputed:
+  title: "{% if collections[ tag ].length == 1 %}Étiquetté « {{tag}} » {% else %} Étiquettés « {{tag}} »{% endif %}"
+permalink: /tags/{{ tag | slugify }}/
+---
+
+<h1>{{ title }}</h1>
+{% set postslist = collections[ tag ] %}
+{% include "postslist.njk" %}
+<p>Voir
+  <a href="{{ '/tags/' | url }}">les étiquettes</a>.</p>

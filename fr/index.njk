@@ -1,0 +1,41 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Accueil
+  order: 0
+---
+
+<h1>Dernier article:</h1>
+<div class="tmpl-post">
+{% set latestpost = collections.posts | head(-1) | first %}
+<time class="postlist-date" datetime="{{ latestpost.date | htmlDateString }}">{{ latestpost.date | readableDate }}</time>
+<a href="{{ latestpost.url | url }}" class="postlist-link">
+  {% if latestpost.data.title %}
+    {{ latestpost.data.title }}
+  {% else %}
+    <code>{{ latestpost.url }}</code>
+  {% endif %}
+</a>
+<ul class="taglist">
+  {% for tag in latestpost.data.tags | filterTagList %}
+    {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+    <li>
+      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+    </li>
+  {% endfor %}
+</ul>
+<p>{{ latestpost.data.description }}</p>
+</div>
+<p>Les articles antérieurs peuvent être trouvés dans
+  <a href="{{ '/blog/' | url }}">les archives</a>.</p>
+{# List all of the pages in the project
+<ul>
+  {%- for entry in collections.all %}
+    <li>
+      <a href="{{ entry.url }}">
+        <code>{{ entry.url }}</code>
+      </a>
+    </li>
+  {%- endfor %}
+</ul>
+#}
