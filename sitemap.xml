@@ -2,26 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://kane-thornwyrd.github.io/blog/firstpost/</loc>
-    <lastmod>2018-05-01</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kane-thornwyrd.github.io/blog/secondpost/</loc>
-    <lastmod>2018-07-04</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kane-thornwyrd.github.io/blog/thirdpost/</loc>
-    <lastmod>2018-08-24</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kane-thornwyrd.github.io/blog/fourthpost/</loc>
-    <lastmod>2018-09-30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kane-thornwyrd.github.io/blog/%C3%A9chodeslabosensuspend/</loc>
     <lastmod>2022-08-28</lastmod>
   </url>
@@ -43,26 +23,6 @@
   
   <url>
     <loc>https://kane-thornwyrd.github.io/tags/</loc>
-    <lastmod>2022-09-22</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kane-thornwyrd.github.io/tags/another-tag/</loc>
-    <lastmod>2022-09-22</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kane-thornwyrd.github.io/tags/second-tag/</loc>
-    <lastmod>2022-09-22</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kane-thornwyrd.github.io/tags/posts-with-two-tags/</loc>
-    <lastmod>2022-09-22</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kane-thornwyrd.github.io/tags/number-2/</loc>
     <lastmod>2022-09-22</lastmod>
   </url>
   
