@@ -48,6 +48,11 @@ body {
   background-color: var(--background-color);
 }
 
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 p:last-child {
   margin-bottom: 0;
 }
@@ -100,6 +105,7 @@ header {
   background-color: #242526;
   z-index: 1000;
   position: relative;
+  width: 100%;
 }
 header:after {
   content: "";
@@ -143,6 +149,19 @@ pre {
 }
 code {
   word-break: break-all;
+}
+
+.back-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 0;
+  display: block;
+  padding: 0 1rem;
+  font-size: 3rem;
+  z-index: 10000;
+  background-color: var(--background-color-contrast);
+  color: var(--color-infobox) !important;
+  text-decoration: none;
 }
 
 /* Header */
@@ -224,6 +243,7 @@ code {
   padding: 1rem;
   padding-top: 3rem;
   background: var(--background-color);
+  order: 10;
 }
 
 
@@ -233,18 +253,41 @@ code {
   flex-wrap: wrap;
 }
 
+.taglist > li {
+  display: inline-block;
+}
+
 
 .tmpl-home, .tmpl-post {
   display: block;
   width: 90%;
   margin: auto;
   padding: 1rem;
-  border: none;
   background: var(--background-color);
 }
 
+.tmpl-home .tmpl-post{
+  border-bottom: 5px solid var(--background-color-contrast);
+}
 
-@media screen and (min-width: 900px) {
+.tmpl-home .taglist{
+  padding: 1rem;
+  margin: 0;
+  background-color: rgba(0,0,0,.1);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+  .tmpl-home .taglist{
+    padding: 1rem;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.1) !important;
+  }
+}
+
+
+@media screen and (min-width: 750px) {
   .layout-postlist {
     position: fixed;
     right:0;
@@ -279,6 +322,7 @@ code {
   .tmpl-home .tmpl-post {
     width: 100%;
     border-left: 5px solid var(--background-color-contrast);
+    border-bottom: none;
   }
 }
 
@@ -319,6 +363,12 @@ code {
     box-shadow: 0px 0px 20px var(--background-color-contrast);
     margin-right: auto;
   }
+
+
+  .tmpl-home .tmpl-post {
+    border-left: none;
+    border-bottom: none;
+  }
 }
 
 /* Tags */
@@ -329,9 +379,7 @@ code {
   text-transform: uppercase;
   font-size: 0.75em; /* 12px /16 */
   padding: 0.08333333333333em 0.3333333333333em; /* 1px 4px /12 */
-  margin-left: 0.6666666666667em; /* 8px /12 */
-  margin-top: 0.5em; /* 6px /12 */
-  margin-bottom: 0.5em; /* 6px /12 */
+  margin: 0;
   color: var(--color-gray-90);
   border-radius: 0.25em; /* 3px /12 */
   text-decoration: none;
