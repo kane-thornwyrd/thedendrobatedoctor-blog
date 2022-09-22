@@ -84,9 +84,9 @@ module.exports = function (eleventyConfig) {
   // });
 
   // Override @11ty/eleventy-dev-server defaults (used only with --serve)
-  eleventyConfig.setServerOptions({
-    showVersion: true,
-  });
+  // eleventyConfig.setServerOptions({
+  //   showVersion: true,
+  // });
 
   return {
     // Control which files Eleventy will process
