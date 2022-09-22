@@ -8,6 +8,8 @@ date: 2022-08-12
 layout: layouts/post.njk
 ---
 
+# {{ title }}
+
 Chère audience,
 
 Comme vous êtes probablement en train de le constater avec dépit, il n’y a pas d’Echo des Labos cette semaine, et il n’y en aura pas d’autres tant qu’au moins un des appels que nous avons fait concernant la censure abusive de Facebook n’aura pas été examiné. Pour rappel, cela fait depuis le 1er juin que nous réclamons qu’un modérateur humain prenne 3 minutes pour lire la chronique incriminée, ce qui est le temps nécessaire pour différencier la désinformation du débunkage. Le nouveau strike dont nous avons été victimes cette semaine met clairement la page en sursis. Il a bien sûr été immédiatement contesté par l’équipe, mais l’appel n’a, lui non plus, toujours pas été examiné. Comme les sanctions s’appliquent toujours avant les appels, un troisième strike sonnerait la disparition pure et simple de la page (et ce probablement même si la modération finissait par reconnaître son tort sur les appels précédents…).
