@@ -9,7 +9,7 @@
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
     "start": "eleventy --serve --quiet",
-    "deploy": "npm run build && gh-pages -d docs",
+    "prepare-gh-pages": "eleventy --pathprefix 'thedendrobatedoctor-blog'",
     "debug": "DEBUG=Eleventy* eleventy"
   },
   "repository": {
