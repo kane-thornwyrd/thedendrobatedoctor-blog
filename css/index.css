@@ -15,8 +15,8 @@
 
   --text-color: var(--color-gray-90);
   --text-color-contrast: var(--color-gray-20);
-  --text-color-link: #082840;
-  --text-color-link-visited: #17050F;
+  --text-color-link: #f00;
+  --text-color-link-visited: #500;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,8 +26,8 @@
     --color-gray-90: #dad8d8;
 
     /* --text-color is assigned to --color-gray-_ above */
-    --text-color-link: #fff;
-    --text-color-link-visited: #ddd;
+    --text-color-link: #f00;
+    --text-color-link-visited: #a00;
     --text-color-contrast: var(--color-gray-90);
 
     --background-color: #18191a;
@@ -319,7 +319,7 @@ code {
     right: 2rem;
     top: 5px;
     bottom: 5px;
-    box-shadow: 10px 10px 20px var(--background-color-contrast);
+    box-shadow: 10px 10px 20px rgba(0, 0,0,.2);
   }
   .layout-postlist::before,
   .layout-postlist::after {
@@ -346,10 +346,16 @@ code {
   .tmpl-post {
     max-width: 900px;
     border-top: none;
-    box-shadow: 0px 0px 20px var(--background-color-contrast);
+    box-shadow: 0px 0px 20px rgba(0,0,0,.2);
     margin-right: auto;
   }
 
+
+  @media (prefers-color-scheme: dark) {
+    .tmpl-post {
+      box-shadow: 0px 0px 20px rgba(255,255,255,.2);
+    }
+  }
 
   .tmpl-home .tmpl-post {
     border-left: none;
@@ -372,10 +378,10 @@ code {
 .post-tag:visited {
   color: inherit;
 } */
-.post-tag:hover > a[href],
+/* .post-tag:hover > a[href],
 .post-tag:focus > a[href]{
   color: var(--color-gray-20);
-}
+} */
 
 .postlist-item > .post-tag {
   align-self: center;
