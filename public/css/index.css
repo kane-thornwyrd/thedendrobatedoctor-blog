@@ -20,19 +20,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-gray-20: #e0e0e0;
-    --color-gray-50: #C0C0C0;
-    --color-gray-90: #adadad;
+    --color-gray-20: rgb(255,255,255);
+    --color-gray-50: rgb(200,200,200);
+    --color-gray-90: rgb(100,100,100);
 
 
     --background-color: #18191a;
     --background-color-contrast: var(--color-gray-20);
 
     /* --text-color is assigned to --color-gray-_ above */
-    --text-color: var(--color-gray-90);
+    --text-color: var(--color-gray-50);
     --text-color-contrast: var(--color-gray-20);
-    --text-color-link: #fff;
-    --text-color-link-visited: rgb(190, 190, 190);
+    --text-color-link: var(--color-gray-20);
+    --text-color-link-visited: var(--color-gray-90);
   }
 }
 
