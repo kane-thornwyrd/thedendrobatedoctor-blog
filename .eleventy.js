@@ -88,6 +88,19 @@ module.exports = function (eleventyConfig) {
     showVersion: true,
   });
 
+  eleventyConfig.addShortcode("emoji", function (emoji, alt = "") {
+    return `<span aria-hidden="true" class="emoji">${emoji}</span>` +
+      (alt ? `<span class="sr-only">${alt}</span>` : "");
+  });
+
+  eleventyConfig.addShortcode("UTip", () => `<a href="https://utip.io/thedendrobatedoctor">UTip</a>`);
+  eleventyConfig.addShortcode("img", (src, alt, style) => `
+<img src="${src}" alt="${alt}" style="${style}">`);
+
+  eleventyConfig.addPassthroughCopy("fr/blog/*.png");
+  eleventyConfig.addPassthroughCopy("fr/blog/*.jpg");
+
+
   return {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid

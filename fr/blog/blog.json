@@ -1,5 +1,7 @@
 {
   "tags": [
     "posts"
-  ]
+  ],
+  "permalink": "/blog/{{ page.fileSlug }}/",
+  "feedTitle": "The Dendrobate Doctor"
 }
