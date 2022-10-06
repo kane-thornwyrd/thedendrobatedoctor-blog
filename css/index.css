@@ -22,7 +22,7 @@
   :root {
     --color-gray-20: #e0e0e0;
     --color-gray-50: #C0C0C0;
-    --color-gray-90: #dad8d8;
+    --color-gray-90: #adadad;
 
 
     --background-color: #18191a;
@@ -32,7 +32,7 @@
     --text-color: var(--color-gray-90);
     --text-color-contrast: var(--color-gray-20);
     --text-color-link: #fff;
-    --text-color-link-visited: #922;
+    --text-color-link-visited: rgb(190, 190, 190);
   }
 }
 
@@ -258,6 +258,9 @@ strong {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
+}
+.taglist li, .post-tags li{
+  margin: 0 0.25em
 }
 
 .post-tag > a {
