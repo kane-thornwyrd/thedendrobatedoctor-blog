@@ -94,8 +94,11 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode("UTip", () => `<a href="https://utip.io/thedendrobatedoctor">UTip</a>`);
-  eleventyConfig.addShortcode("img", (src, alt, style) => `
-<img src="${src}" alt="${alt}" style="${style}">`);
+  eleventyConfig.addShortcode("img", (src, alt, style) => {
+    src = process.env['NODE_ENV'] === "production" ? `../../${src}` : src;
+    return `<img src="${src}" alt="${alt}" style="${style}">`
+  }
+  );
 
   // eleventyConfig.addPassthroughCopy("public/img/*.png");
   // eleventyConfig.addPassthroughCopy("fr/blog/*.jpg");

@@ -8,9 +8,6 @@
 
 /* Theme colors */
 :root {
-  --color-gray-20: #e0e0e0;
-  --color-gray-50: #C0C0C0;
-  --color-gray-90: #333;
 
   --background-color: #fff;
   --background-color-contrast: var(--color-gray-90);
@@ -27,13 +24,15 @@
     --color-gray-50: #C0C0C0;
     --color-gray-90: #dad8d8;
 
-    /* --text-color is assigned to --color-gray-_ above */
-    --text-color-link: #f00;
-    --text-color-link-visited: #a00;
-    --text-color-contrast: var(--color-gray-90);
 
     --background-color: #18191a;
     --background-color-contrast: var(--color-gray-20);
+
+    /* --text-color is assigned to --color-gray-_ above */
+    --text-color: var(--color-gray-90);
+    --text-color-contrast: var(--color-gray-20);
+    --text-color-link: #fff;
+    --text-color-link-visited: #922;
   }
 }
 
@@ -93,6 +92,7 @@ blockquote :last-child::after {
 
 a[href] {
   color: var(--text-color-link);
+  text-decoration: underline;
 }
 a[href]:visited {
   color: var(--text-color-link-visited);
