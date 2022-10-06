@@ -97,8 +97,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("img", (src, alt, style) => `
 <img src="${src}" alt="${alt}" style="${style}">`);
 
-  eleventyConfig.addPassthroughCopy("fr/blog/*.png");
-  eleventyConfig.addPassthroughCopy("fr/blog/*.jpg");
+  // eleventyConfig.addPassthroughCopy("public/img/*.png");
+  // eleventyConfig.addPassthroughCopy("fr/blog/*.jpg");
 
 
   return {
