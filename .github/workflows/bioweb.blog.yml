@@ -23,18 +23,18 @@ jobs:
       - name: Deps
         env:
           NODE_ENV: production
-          HOSTING_SERVICE: gh-pages
+          HOSTING_SERVICE: biowebblog
         run: |
           npm i --fund false
       - name: Build
         env:
           NODE_ENV: production
-          HOSTING_SERVICE: production
+          HOSTING_SERVICE: biowebblog
         run: |
           npm run prepare-gh-pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: docs
-          publish_branch: gh-pages
+          publish_branch: bioweb-blog
           github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -95,7 +95,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("UTip", () => `<a href="https://utip.io/thedendrobatedoctor">UTip</a>`);
   eleventyConfig.addShortcode("img", (src, alt, style) => {
-    src = process.env['NODE_ENV'] === "production" ? `../..${src}` : src;
+    src = process.env['HOSTING_SERVICE'] === "gh-pages" ? `../..${src}` : src;
     return `<img src="${src}" alt="${alt}" style="${style}">`
   }
   );
@@ -132,7 +132,7 @@ module.exports = function (eleventyConfig) {
     // You can also pass this in on the command line using `--pathprefix`
 
     // Optional (default is shown)
-    pathPrefix: "/",
+    pathPrefix: process.env['HOSTING_SERVICE'] === "gh-pages" ? "thedendrobatedoctor-blog" : "/",
     // -----------------------------------------------------------------
 
     // These are all optional (defaults are shown):
