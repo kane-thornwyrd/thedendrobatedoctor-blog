@@ -100,8 +100,9 @@ module.exports = function (eleventyConfig) {
   );
 
   eleventyConfig.addPassthroughCopy("public/*.ico");
+  eleventyConfig.addPassthroughCopy("public/*.ico");
   eleventyConfig.addPassthroughCopy("fr/blog/*.jpg");
-  eleventyConfig.addPassthroughCopy("fr/blog/*.png");
+  eleventyConfig.addPassthroughCopy("CNAME");
 
 
   return {
