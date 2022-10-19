@@ -94,8 +94,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode("UTip", () => `<a href="https://utip.io/thedendrobatedoctor">UTip</a>`);
-  eleventyConfig.addShortcode("img", (src, alt, style) => {
-    return `<img src="${src}" alt="${alt}" style="${style}">`
+  eleventyConfig.addShortcode("img", (src, alt) => {
+    return `<img src="${src}" alt="${alt}">`
   }
   );
 
