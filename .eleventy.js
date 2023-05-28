@@ -94,8 +94,16 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode("UTip", () => `<a href="https://utip.io/thedendrobatedoctor">UTip</a>`);
+  eleventyConfig.addShortcode("KissKissBankBank", () => `<a href="https://www.kisskissbankbank.com/fr/projects/the-dendrobate-doctor">KissKissBankBank</a>`);
+  eleventyConfig.addShortcode("Facebook", () => `<a href="https://www.facebook.com/TheDendrobateDoctor/?ref=blog">la page Facebook</a>`);
+
   eleventyConfig.addShortcode("img", (src, alt) => {
     return `<img src="${src}" alt="${alt}">`
+  }
+  );
+
+  eleventyConfig.addShortcode("abbr", (text, meaning) => {
+    return `<abbr title="${meaning}">${text}</abbr>`
   }
   );
 
