@@ -93,7 +93,8 @@ module.exports = function (eleventyConfig) {
       (alt ? `<span class="sr-only">${alt}</span>` : "");
   });
 
-  eleventyConfig.addShortcode("UTip", () => `<a href="https://utip.io/thedendrobatedoctor">UTip</a>`);
+  eleventyConfig.addShortcode("UTip", () => `<a disabled=true>UTip</a> (maintenant c'est sur <a href="https://www.kisskissbankbank.com/fr/projects/the-dendrobate-doctor">KissKissBankBank</a>)`);
+
   eleventyConfig.addShortcode("KissKissBankBank", () => `<a href="https://www.kisskissbankbank.com/fr/projects/the-dendrobate-doctor">KissKissBankBank</a>`);
   eleventyConfig.addShortcode("Facebook", () => `<a href="https://www.facebook.com/TheDendrobateDoctor/?ref=blog">la page Facebook</a>`);
 

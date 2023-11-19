@@ -7,7 +7,6 @@ eleventyNavigation:
 
 <div class="tmpl-post">
   {% set latestpost = collections.posts | head(-1) | first %}
-  <time class="postlist-date" datetime="{{ latestpost.date | htmlDateString }}">{{ latestpost.date | readableDate }}</time>
   <a href="{{ latestpost.url | url }}" class="postlist-link">
     {% if latestpost.data.title %}
       {{ latestpost.data.title }}

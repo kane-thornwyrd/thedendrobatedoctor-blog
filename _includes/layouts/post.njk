@@ -3,7 +3,6 @@ layout: layouts/base.njk
 templateClass: tmpl-post
 ---
 
-<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 <ul class="post-tags">
   {%- for tag in tags | filterTagList %}
     {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
